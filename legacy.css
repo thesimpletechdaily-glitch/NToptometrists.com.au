@@ -1,0 +1,242 @@
+/* 
+  NT Optometrists Legacy Design System
+  Branding: Lime Green (#B2D235), Navy (#003399), White
+*/
+
+:root {
+    --legacy-green: #B2D235;
+    --legacy-blue: #003399;
+    --legacy-blue-dark: #002266;
+    --legacy-text-white: #FFFFFF;
+    --legacy-text-dark: #333333;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--legacy-text-dark);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--legacy-green);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--legacy-blue);
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.legacy-logo {
+    max-width: 90%;
+    width: 800px;
+    height: auto;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--legacy-blue);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* --- Hero Section (Legacy Branded) --- */
+.hero {
+    background-color: var(--legacy-green);
+    padding: 1rem 2rem 4rem;
+    text-align: center;
+    color: white;
+}
+
+.hero .sub-header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero .address-block {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.phone-strip {
+    background: linear-gradient(to right, #6699ff, var(--legacy-blue));
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-strip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.phone-strip span {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-right: 0.4rem;
+}
+
+/* --- Layout Components --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    color: var(--legacy-blue);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Service Cards --- */
+.card {
+    background: white;
+    padding: 2.5rem;
+    border: 2px solid var(--legacy-green);
+    transition: var(--transition);
+    border-radius: 8px;
+}
+
+.card:hover {
+    border-color: var(--legacy-blue);
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--legacy-blue);
+    margin-bottom: 1rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--legacy-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--legacy-blue-dark);
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--legacy-blue);
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* --- Specialized Sections --- */
+.casa-block {
+    background-color: var(--legacy-blue);
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.casa-block h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.frames-section {
+    background-color: #f9f9f9;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--legacy-blue);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-nav {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1,
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
